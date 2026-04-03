@@ -1,13 +1,17 @@
 import 'dart:io';
 
 void main() {
-  print(checkSquare(length: 5, breadth: 5));
-}
 
-String checkSquare({required double length, required double breadth}) {
+  stdout.write("Enter length: ");
+  double length = double.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter breadth: ");
+  double breadth = double.parse(stdin.readLineSync()!);
+
+ 
   if (length == breadth) {
-    return "Square";
+    print("It is a square.");
   } else {
-    return "Not Square";
+    print("It is not a square.");
   }
 }
