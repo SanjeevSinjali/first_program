@@ -46,13 +46,12 @@
 // }
 
 class Student {
-  // properties
+
   int _marks;
 
-  // Getter
+
   int get marks => _marks;
 
-  // Setter (validation)
   set marks(int value) {
     if (value >= 0 && value <= 100) {
       _marks = value;
@@ -62,7 +61,6 @@ class Student {
     }
   }
 
-  // constructor
   Student({required int marks}) : _marks = marks;
 
   @override
@@ -75,7 +73,6 @@ void main() {
   Student s = Student(marks: 85);
   print(s);
 
-  // Using Getter and Setter
-  s.marks = 90;   // valid
-  s.marks = 120;  // invalid
+  s.marks = 90;   
+  s.marks = 120;  
 }
